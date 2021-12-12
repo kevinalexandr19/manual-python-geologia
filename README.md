@@ -4,7 +4,7 @@
 ### **Editado por: Kevin Alexander Gómez**
 #### Contacto: kevinalexandr19@gmail.com | [Linkedin](https://www.linkedin.com/in/kevin-alexander-g%C3%B3mez-2b0263111/) | [Github](https://github.com/kevinalexandr19)
 ***
-#### Puedes ejecutar este repositorio en Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kevinalexandr19/manual-python-geologia/main)
+#### Puedes ejecutar este repositorio en Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kevinalexandr19/manual-python-geologia/main?labpath=notebooks)
 
 Este manual ha sido creado con la finalidad de facilitar el aprendizaje en Python para estudiantes y profesionales en el campo de la Geología.
 
@@ -20,7 +20,7 @@ También es importante tener perseverancia para aprender cada tema y creatividad
 
 
 ***
-## **Índice** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kevinalexandr19/manual-python-geologia/main)
+## **Índice** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kevinalexandr19/manual-python-geologia/main?labpath=notebooks)
 
 1. Fundamentos de Python\
   1a. Python básico\
