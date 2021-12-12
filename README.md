@@ -31,7 +31,7 @@ También es importante tener perseverancia para aprender cada tema y creatividad
   3a. Seaborn\
   3b. Pyrolite\
   3c. Mplstereonet
-4. Análisis de datos\
+4. Ciencia de datos\
   4a. Análisis descriptivo\
   4b. Visualización de datos
 
