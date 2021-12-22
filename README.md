@@ -56,7 +56,7 @@ Si no tienes instalado `Python`, puedes seguir las indicaciones del archivo `Ane
 
 ***
 ### Referencias
-- Maurizio Petrelli. [Introduction to Python in Earth Science Data Analysis](https://link.springer.com/book/10.1007/978-3-030-78055-5). Repositorio en [Github](https://github.com/petrelli-m/python_earth_science_book)
+- Maurizio Petrelli (2021). [Introduction to Python in Earth Science Data Analysis](https://link.springer.com/book/10.1007/978-3-030-78055-5). Repositorio en [Github](https://github.com/petrelli-m/python_earth_science_book)
 
 
 
