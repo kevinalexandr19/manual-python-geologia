@@ -1,5 +1,5 @@
 # Manual de Python aplicado a la Geología
-### **Versión: 1.2 (Diciembre 2021)**
+### **Versión: 1.3 (Enero 2022)**
 ***
 ### **Editado por: Kevin Alexander Gómez**
 #### Contacto: kevinalexandr19@gmail.com | [Linkedin](https://www.linkedin.com/in/kevin-alexander-g%C3%B3mez-2b0263111/) | [Github](https://github.com/kevinalexandr19)
