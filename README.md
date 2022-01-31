@@ -22,7 +22,7 @@ También es importante tener perseverancia para aprender cada tema y creatividad
 
 
 ***
-## **Índice** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kevinalexandr19/manual-python-geologia/main?labpath=notebooks)
+## **Índice** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kevinalexandr19/manual-python-geologia/main?labpath=notebooks%2F0_inicio.ipynb)
 Todos los capítulos están disponibles dentro del repositorio como notebooks de Jupyter `.ipynb`.
 
 1. Fundamentos de Python\
