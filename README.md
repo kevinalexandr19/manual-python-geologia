@@ -7,6 +7,8 @@
 #### Puedes ejecutar este repositorio en la nube a través de Binder
 Ingresa al repo haciendo clic aquí ☞ [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kevinalexandr19/manual-python-geologia/main?labpath=notebooks%2F0_inicio.ipynb)
 
+Si tienes cuenta en Github, no olvides darle clic a la estrella de la esquina superior derecha ⭐
+
 ***
 ## Descripción
 Este manual ha sido creado con la finalidad de facilitar el aprendizaje en Python para estudiantes y profesionales en el campo de la Geología.
