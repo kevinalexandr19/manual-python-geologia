@@ -7,7 +7,7 @@
 #### Puedes ejecutar este repositorio en la nube a través de Binder
 Ingresa al repo haciendo clic aquí ☞ [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kevinalexandr19/manual-python-geologia/main?labpath=notebooks%2F0_inicio.ipynb)
 
-Si tienes cuenta en Github, no olvides darle clic a la estrella ubicada en la esquina superior derecha ⭐
+Si tienes cuenta en Github, no olvides darle una estrella al proyecto para que siga creciendo ⭐
 
 ***
 ## Descripción
