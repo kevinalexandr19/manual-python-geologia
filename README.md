@@ -1,5 +1,5 @@
 # Manual de Python aplicado a la Geología
-### **Versión: 1.3 (Enero 2022)**
+### **Versión: 1.4 (Febrero 2022)**
 ***
 ### **Editado por: Kevin Alexander Gómez**
 #### Contacto: kevinalexandr19@gmail.com | [Linkedin](https://www.linkedin.com/in/kevin-alexander-g%C3%B3mez-2b0263111/) | [Github](https://github.com/kevinalexandr19)
@@ -41,6 +41,8 @@ Todos los capítulos están disponibles dentro del repositorio como notebooks de
 4. Ciencia de datos\
   4a. Análisis descriptivo\
   4b. Visualización de datos
+5. Aplicaciones en Geología
+  5a. Visualizando registros de pozo
 
 Recomiendo mucho usar Binder para interactuar con estos notebooks. Alternativamente, puedes clonar el repositorio y usarlos como plantilla o reusar el código para desarrollar tus propios notebooks.
 
