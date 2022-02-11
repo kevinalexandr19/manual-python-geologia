@@ -5,7 +5,9 @@
 #### Contacto: kevinalexandr19@gmail.com | [Linkedin](https://www.linkedin.com/in/kevin-alexander-g%C3%B3mez-2b0263111/) | [Github](https://github.com/kevinalexandr19)
 ***
 #### Puedes ejecutar este repositorio en la nube a través de Binder
-Ingresa al repo haciendo clic aquí ☞ [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kevinalexandr19/manual-python-geologia/main?labpath=notebooks)
+Ingresa al repo haciendo clic aquí ☞ [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kevinalexandr19/manual-python-geologia/main?labpath=notebooks%2F0_inicio.ipynb)
+
+Si tienes cuenta en Github, no olvides darle una estrella al proyecto para que siga creciendo ⭐
 
 ***
 ## Descripción
@@ -22,7 +24,7 @@ También es importante tener perseverancia para aprender cada tema y creatividad
 
 
 ***
-## **Índice** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kevinalexandr19/manual-python-geologia/main?labpath=notebooks)
+## **Índice** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kevinalexandr19/manual-python-geologia/main?labpath=notebooks%2F0_inicio.ipynb)
 Todos los capítulos están disponibles dentro del repositorio como notebooks de Jupyter `.ipynb`.
 
 1. Fundamentos de Python\
