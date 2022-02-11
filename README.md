@@ -41,7 +41,7 @@ Todos los capítulos están disponibles dentro del repositorio como notebooks de
 4. Ciencia de datos\
   4a. Análisis descriptivo\
   4b. Visualización de datos
-5. Aplicaciones en Geología
+5. Aplicaciones en Geología\
   5a. Visualizando registros de pozo
 
 Recomiendo mucho usar Binder para interactuar con estos notebooks. Alternativamente, puedes clonar el repositorio y usarlos como plantilla o reusar el código para desarrollar tus propios notebooks.
