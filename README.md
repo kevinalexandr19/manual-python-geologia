@@ -19,7 +19,7 @@ También es importante tener perseverancia para aprender cada tema y creatividad
 
 ## ¿Qué voy a aprender?
 - Aprenderás a desarrollar código usando Python.
-- Desarrollarás el pensamiento algorítmico.
+- Desarrollarás un pensamiento algorítmico.
 - Aprenderás a usar Python para solucionar problemas en Geología.
 
 
