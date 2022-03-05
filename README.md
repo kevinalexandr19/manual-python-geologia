@@ -1,5 +1,5 @@
 # Manual de Python aplicado a la Geología
-### **Versión: 1.4 (Febrero 2022)**
+### **Versión: 1.5 (Marzo 2022)**
 ***
 <img src="notebooks/resources/portada.png" alt="portada" width="1400"/>
 
