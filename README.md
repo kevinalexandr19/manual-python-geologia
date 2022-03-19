@@ -65,7 +65,7 @@ Si no tienes instalado `Python`, puedes seguir las indicaciones del archivo `Ane
 ***
 ### Referencias
 - Maurizio Petrelli (2021). [Introduction to Python in Earth Science Data Analysis](https://link.springer.com/book/10.1007/978-3-030-78055-5). Repositorio en [Github](https://github.com/petrelli-m/python_earth_science_book)
-
+- Barbieri, R., Garelik, C. (2022). [La matemática y las geociencias](https://editorial.unrn.edu.ar/index.php/catalogo/346/view_bl/62/lecturas-de-catedra/106/la-matematica-y-las-geociencias?tab=getmybooksTab&is_show_data=1). Editorial UNRN (pp. 15 y 136).
 
 
 
