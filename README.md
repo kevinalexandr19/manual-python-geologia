@@ -33,7 +33,8 @@ Todos los capítulos están disponibles dentro del repositorio como notebooks de
 
 1. Fundamentos de Python\
   1a. Python básico\
-  1b. Ejercicios de Python en Geología
+  1b. Ejercicios de Python en Geología\
+  1c. Ejercicios resueltos de Python en Geología
 2. Librerías fundamentales de Python\
   2a. Numpy\
   2b. Pandas\
