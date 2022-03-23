@@ -14,5 +14,5 @@
        "left":{"collapsed":true,"widgets":["filebrowser","running-sessions","command-palette","tab-manager","extensionmanager.main-view"]},
        "right":{"collapsed":true,"widgets":[]}},
   "terminal:1":{"data":{"name":"1"}},
-  "notebook:0_inicio.ipynb":{"data":{"path":"notebooks/0_inicio.ipynb","factory":"Notebook"}},
-"metadata":{"id":"/lab"}}}}
+  "notebook:0_inicio.ipynb":{"data":{"path":"notebooks/0_inicio.ipynb","factory":"Notebook"}}}},
+"metadata":{"id":"/lab"}}
