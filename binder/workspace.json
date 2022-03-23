@@ -2,13 +2,7 @@
   {"layout-restorer:data":
     {"main":
       {"dock":
-        {"type":"split-area",
-         "orientation":"horizontal",
-         "sizes":[0.5,0.5],
-         "children":
-          [{"type":"tab-area","currentIndex":0,"widgets":{"type":"split-area","orientation":"vertical","sizes":[0.5,0.5],"children":[{"type":"tab-area","currentIndex":0,"widgets":["notebook:0_inicio.ipynb"]},
-           {"type":"tab-area","currentIndex":0,"widgets":["terminal:1"]}]}}]},
-       "mode":"multiple-document",
+        {"mode":"multiple-document",
        "current":"terminal:1"},
      "left":{"collapsed":true,"widgets":["filebrowser","running-sessions","command-palette","tab-manager","extensionmanager.main-view"]},
      "right":{"collapsed":true,"widgets":[]}},
