@@ -6,4 +6,4 @@
     "@jupyterlab/settingeditor-extension:plugin":
             {"sizes":[0.2],
              "container":{"plugin":"@jupyterlab/codemirror-extension:commands","sizes":[0.5,0.5]}},"file-browser-filebrowser:cwd":{"path":"notebooks"}},
-"metadata":{"id":"default"}}
+"metadata":{"id":"/lab"}}
