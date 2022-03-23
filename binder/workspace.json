@@ -3,9 +3,7 @@
     {"main":
       {"dock":
         {"mode":"multiple-document",
-       "current":"terminal:1"},
-     "left":{"collapsed":true,"widgets":["filebrowser","running-sessions","command-palette","tab-manager","extensionmanager.main-view"]},
-     "right":{"collapsed":true,"widgets":[]}},
-  "terminal:1":{"data":{"name":"1"}},
-  "notebook:0_inicio.ipynb":{"data":{"path":"notebooks/0_inicio.ipynb","factory":"Notebook"}}}},
+       "current":"terminal:1"}},
+     "left":{"collapsed":true,"widgets":["filebrowser","running-sessions","command-palette","tab-manager","extensionmanager.main-view"]}},
+  "terminal:1":{"data":{"name":"1"}}}},
 "metadata":{"id":"/lab"}}
