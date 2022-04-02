@@ -1,5 +1,5 @@
 # Python para Geólogos
-### **Versión: 1.5 (Marzo 2022)**
+### **Versión: 1.6 (Abril 2022)**
 ***
 <img src="notebooks/resources/portada.png" alt="portada" width="1400"/>
 
@@ -47,7 +47,8 @@ Todos los capítulos están disponibles dentro del repositorio como notebooks de
   4a. Análisis descriptivo\
   4b. Visualización de datos
 5. Aplicaciones en Geología\
-  5a. Visualizando registros de pozo
+  5a. Visualizando registros de pozo\
+  5b. Estimación de riesgo de falla en un talud
 
 Recomiendo mucho usar Binder para interactuar con estos notebooks. Alternativamente, puedes clonar el repositorio y usarlos como plantilla o reusar el código para desarrollar tus propios notebooks.
 
@@ -67,6 +68,7 @@ Si no tienes instalado `Python`, puedes seguir las indicaciones del archivo `Ane
 ### Referencias
 - Maurizio Petrelli (2021). [Introduction to Python in Earth Science Data Analysis](https://link.springer.com/book/10.1007/978-3-030-78055-5). Repositorio en [Github](https://github.com/petrelli-m/python_earth_science_book)
 - Barbieri, R., Garelik, C. (2022). [La matemática y las geociencias](https://editorial.unrn.edu.ar/index.php/catalogo/346/view_bl/62/lecturas-de-catedra/106/la-matematica-y-las-geociencias?tab=getmybooksTab&is_show_data=1). Editorial UNRN (pp. 15 y 136).
+- Marsden, Eric. (2021). [Monte Carlo simulation for estimating slope failure risk](https://risk-engineering.org/notebook/monte-carlo-slope-stability.html).
 
 
 
