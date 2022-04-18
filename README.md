@@ -33,22 +33,26 @@ Todos los capítulos están disponibles dentro del repositorio como notebooks de
 
 1. Fundamentos de Python\
   1a. Python básico\
-  1b. Ejercicios de Python en Geología\
-  1c. Ejercicios resueltos de Python en Geología
-2. Librerías fundamentales de Python\
-  2a. Numpy\
-  2b. Pandas\
-  2c. Matplotlib
-3. Librerías con aplicación en Geología\
-  3a. Seaborn\
-  3b. Pyrolite\
-  3c. Mplstereonet
-4. Ciencia de datos\
-  4a. Análisis descriptivo\
-  4b. Visualización de datos
-5. Aplicaciones en Geología\
-  5a. Visualizando registros de pozo\
-  5b. Estimación de riesgo de falla en un talud
+  1b. Numpy\
+  1c. Pandas\
+  1d. Matplotlib\
+  1e. Ejercicios de Python en Geología\
+  1f. Ejercicios resueltos de Python en Geología
+2. Ciencia de datos\
+  2a. Seaborn\
+  2b. Análisis descriptivo\
+  2c. Visualización de datos
+3. Geoquímica\
+  3a. Pyrolite
+4. Geofísica\
+  4a. Visualizando registros de pozo
+5. Geología estructural\
+  5a. Mplstereonet\
+  5b. Red estereográfica interactiva
+6. Geotecnia\
+  6a. Estimación del riesgo de fallo en un talud
+7. Geoestadística\
+  7a. Declustering
 
 Recomiendo mucho usar Binder para interactuar con estos notebooks. Alternativamente, puedes clonar el repositorio y usarlos como plantilla o reusar el código para desarrollar tus propios notebooks.
 
