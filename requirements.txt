@@ -1,5 +1,6 @@
 pandas==1.3.0
 matplotlib==3.5.1
+numba==0.53.1
 seaborn==0.11.2
 ipywidgets==7.6.5
 plotly==5.4.0
