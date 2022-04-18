@@ -8,4 +8,5 @@ mplstereonet==0.6.2
 pyrolite==0.3.0
 geopy==2.2.0
 geostatspy==0.0.25
+statsmodels==0.12.2
 jupyterlab==3.0.16

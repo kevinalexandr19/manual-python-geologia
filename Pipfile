@@ -16,6 +16,8 @@ geopy = "==2.2.0"
 jupyterlab = "==3.0.16"
 geostatspy = "==0.0.25"
 numba = "==0.53.1"
+scipy = "==1.7.0"
+statsmodels = "==0.12.2"
 
 [dev-packages]
 
