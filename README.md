@@ -1,5 +1,5 @@
 # Python para Geólogos
-### **Versión: 1.6 (Abril 2022)**
+### **Versión: 1.7 (Mayo 2022)**
 ***
 <img src="notebooks/resources/portada.png" alt="portada" width="1400"/>
 
@@ -38,23 +38,27 @@ Todos los capítulos están disponibles dentro del repositorio como notebooks de
   1d. Matplotlib\
   1e. Ejercicios de Python en Geología\
   1f. Ejercicios resueltos de Python en Geología
-2. Ciencia de datos\
-  2a. Seaborn\
-  2b. Análisis descriptivo\
-  2c. Visualización de datos
-3. Geoquímica\
-  3a. Pyrolite
-4. Geofísica\
-  4a. Visualizando registros de pozo
-5. Geología estructural\
-  5a. Mplstereonet\
-  5b. Red estereográfica interactiva
-6. Geotecnia\
-  6a. Estimación del riesgo de fallo en un talud
-7. Geoestadística\
-  7a. Declustering
+2. Estadística\
+  2a. Bootstrap
+3. Ciencia de datos\
+  3a. Seaborn\
+  3b. Análisis descriptivo\
+  3c. Visualización de datos
+4. Geoestadística\
+  4a. Declustering\
+  4b. Variograma
+5. Geoquímica\
+  5a. Pyrolite
+6. Geofísica\
+  6a. Visualizando registros de pozo
+7. Geología estructural\
+  7a. Mplstereonet\
+  7b. Red estereográfica interactiva
+8. Geotecnia\
+  8a. Estimación de la probabilidad de falla en un talud
 
-Recomiendo mucho usar Binder para interactuar con estos notebooks. Alternativamente, puedes clonar el repositorio y usarlos como plantilla o reusar el código para desarrollar tus propios notebooks.
+Es altamente recomendable usar Binder para interactuar con los notebooks.\
+Alternativamente, puedes clonar el repositorio y usarlos como plantilla o reusar el código para desarrollar tus propios notebooks.
 
 
 
