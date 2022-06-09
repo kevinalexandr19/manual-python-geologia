@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas = "*"
+matplotlib = "*"
+tqdm = "*"
+numba = "*"
+seaborn = "*"
+ipywidgets = "*"
+plotly = "*"
+mplstereonet = "*"
+pyrolite = "*"
+geopy = "*"
+geostatspy = "*"
+statsmodels = "*"
+vpython = "*"
+open3d = "*"
+jupyterlab = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
