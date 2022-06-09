@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas = "==1.3.0"
+matplotlib = "==3.5.1"
+seaborn = "==0.11.2"
+ipywidgets = "==7.6.5"
+plotly = "==5.4.0"
+requests = "==2.26.0"
+mplstereonet = "==0.6.2"
+pyrolite = "==0.3.1"
+geopy = "==2.2.0"
+jupyterlab = "==3.4.2"
+geostatspy = "==0.0.25"
+numba = "==0.53.1"
+scipy = "==1.7.0"
+statsmodels = "==0.12.2"
+tqdm = "==4.64.0"
+vpython = "==7.6.3"
+open3d = "==0.15.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
