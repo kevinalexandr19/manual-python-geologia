@@ -7,9 +7,9 @@ ipywidgets==7.6.5
 plotly==5.4.0
 mplstereonet==0.6.2
 pyrolite==0.3.1
+geopy==2.2.0
 vpython==7.6.3
 open3d==0.15.2
-geopy==2.2.0
 geostatspy==0.0.25
 statsmodels==0.12.2
 jupyterlab==3.4.2
