@@ -1,7 +1,11 @@
 # Python para Geólogos
-### **Versión: 1.7 (Mayo 2022)**
+### **Versión: 1.8 (Julio 2022)**
 ***
-<img src="notebooks/resources/portada.png" alt="portada" width="1400"/>
+
+<p float="left">
+  <img src="notebooks/resources/portada.png" alt="portada" width="500"/>
+  <img src="notebooks/resources/drillhole_3d.png" alt="portada" width="500"/>
+</p>
 
 ***
 
@@ -21,10 +25,10 @@ Es recomendable tener conocimientos previos en geología general, estadística y
 También es importante tener perseverancia para aprender cada tema y creatividad para resolver problemas.
 
 
-## ¿Qué voy a aprender?
-- Aprenderás a desarrollar código usando Python.
-- Desarrollarás un pensamiento algorítmico.
-- Aprenderás a usar Python para solucionar problemas en Geología.
+## Objetivos del proyecto
+- Aprender a desarrollar código usando Python.
+- Desarrollar un pensamiento algorítmico.
+- Aprender a usar Python para solucionar problemas en Geología.
 
 
 ***
@@ -42,8 +46,11 @@ Todos los capítulos están disponibles dentro del repositorio como notebooks de
   2a. Bootstrap
 3. Ciencia de datos\
   3a. Seaborn\
-  3b. Análisis descriptivo\
-  3c. Visualización de datos
+  3b. Agregando interactividad dentro de Python\
+  3c. Análisis descriptivo\
+  3d. Visualización de datos\
+  3e. Visualización de sondajes en 3D\
+  3f. Visualización de un modelo de bloques en 3D
 4. Geoestadística\
   4a. Declustering\
   4b. Variograma
