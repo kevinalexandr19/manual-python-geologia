@@ -2,10 +2,7 @@
 ### **Versión: 1.8 (Julio 2022)**
 ***
 
-<p float="left">
-  <img src="notebooks/resources/portada.png" alt="portada" width="500"/>
-  <img src="notebooks/resources/drillhole_3d.png" alt="portada" width="500"/>
-</p>
+<img src="notebooks/resources/portada.png" alt="portada" width="1400"/>
 
 ***
 
