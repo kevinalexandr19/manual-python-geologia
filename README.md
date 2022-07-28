@@ -40,14 +40,14 @@ Todos los capítulos están disponibles dentro del repositorio como notebooks de
   1e. Ejercicios de Python en Geología\
   1f. Ejercicios resueltos de Python en Geología
 2. Estadística\
-  2a. Bootstrap
+  2a. Bootstrap\
+  2b. Análisis descriptivo
 3. Ciencia de datos\
   3a. Seaborn\
   3b. Agregando interactividad dentro de Python\
-  3c. Análisis descriptivo\
-  3d. Visualización de datos\
-  3e. Visualización de sondajes en 3D\
-  3f. Visualización de un modelo de bloques en 3D
+  3c. Visualización de datos\
+  3d. Visualización de sondajes en 3D\
+  3e. Visualización de un modelo de bloques en 3D
 4. Geoestadística\
   4a. Declustering\
   4b. Variograma
@@ -60,6 +60,9 @@ Todos los capítulos están disponibles dentro del repositorio como notebooks de
   7b. Red estereográfica interactiva
 8. Geotecnia\
   8a. Estimación de la probabilidad de falla en un talud
+  
+### Plantillas de trabajo
+- Plantilla para visualizar sondajes en 3D
 
 Es altamente recomendable usar Binder para interactuar con los notebooks.\
 Alternativamente, puedes clonar el repositorio y usarlos como plantilla o reusar el código para desarrollar tus propios notebooks.
