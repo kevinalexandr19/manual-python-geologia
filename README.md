@@ -50,7 +50,8 @@ Todos los capítulos están disponibles dentro del repositorio como notebooks de
   3e. Visualización de un modelo de bloques en 3D
 4. Geoestadística\
   4a. Declustering\
-  4b. Variograma
+  4b. Variograma\
+  4c. Interpolación 2D - Inverso de la distancia
 5. Geoquímica\
   5a. Pyrolite
 6. Geofísica\
