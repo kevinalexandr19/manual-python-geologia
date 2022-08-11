@@ -40,9 +40,9 @@ def xyz(d, az1, dip1, az2, dip2):
 class DrillData:
     """    Drillhole data containing collar, survey and assay information.\n
     Parameters\n    ----------
-    collar : pandas.DataFrame, contains the drillhole collar data. Columns: BHID, XCOLLAR, YCOLLAR, ZCOLLAR.\n
-    survey : pandas.DataFrame, contains the drillhole survey data. Columns: BHID, AT, AZ, DIP.\n
-    table: pandas.DataFrame, contains the drillhole geological data. Columns: BHID, FROM, TO, and any combination of features.\n"""        
+    collar : pandas.DataFrame, contains the drillhole collar data. Columns: ID, X, Y, Z.\n
+    survey : pandas.DataFrame, contains the drillhole survey data. Columns: ID, AT, AZ, DIP.\n
+    table: pandas.DataFrame, contains the drillhole geological data. Columns: ID, FROM, TO, and any combination of features.\n"""        
         
     def __init__(self, collar: pd.DataFrame, survey: pd.DataFrame, table: pd.DataFrame, table_name: str):
         print("Los sondajes deben ser validados antes de realizar la visualización 3D.")
@@ -52,40 +52,45 @@ class DrillData:
         self.table_name = table_name
         self.validated = False
         self.has_points = False
-        # Falta validar collar.unique == survey.unique 
         
         
     def validate_columns(self, df: pd.DataFrame, name: str, columns: list, istable=False):
         """Validates the name of each column in collar, survey and table."""
         
-        print(f"    Validación de columnas en {name}:")
+        print(f"\033[1m    Validación de columnas en {name}:\033[0m")
         dfcols = list(df.columns)
-        count = 0
+        count = len(columns)
         
+        missing_cols = columns
         for col in dfcols:
             if col in columns:
-                print(f"        Columna {col}: incluida")
+                print(f"\033[1m        Columna {col}: incluida\033[0m")
+                missing_cols.remove(col)
+                count -= 1
             else:
-                if istable:
-                    print(f"        Columna adicional: {col}")
-                else:
-                    count += 1
-                    print(f"        Columna adicional {col}: es necesario remover esta columna")
+                print(f"        Columna adicional: {col}")
         
         if count == 0:
             self.validated = True
+        else:
+            print(f"    Faltan las siguientes columnas en {name}: {missing_cols}")
+            if istable == False:
+                print(f"    Existen {count} columnas adicionales en {name}, renombrar o remover estas columnas para resolver el problema.")
     
     
-    def validate_datatypes(self, df, name, dtypes: dict, istable=False):       
+    def validate_datatypes(self, df, name, dtypes: dict, istable=False):
         """Validates the data type of each column in collar, survey and table."""
         
-        print(f"    Validación de tipos de datos en {name}:")
+        if not self.validated:
+            return print("\033[1m    Las columnas no han sido validadas. No es posible validar los tipos de datos.\033[0m")
+        
+        print(f"\033[1m    Validación de tipos de datos en {name}:\033[0m")
         df_dtypes = dict(df.dtypes)
         count = 0
         
         for col, dtype in dtypes.items():
             if df_dtypes[col] == dtype:
-                print(f"        Columna {col}: {dtype}")
+                print(f"\033[1m        Columna {col}: {dtype}\033[0m")
             else:
                 count += 1
                 print(f"        Columna {col}: tipo de dato incorrecto. Cambiar a {dtype}")
@@ -98,11 +103,15 @@ class DrillData:
     
     def validate_survey(self):
         """Validates that each drillhole has more than one survey row"""
+        
+        if not self.validated:
+            return print("\033[1m    Las columnas no han sido validadas. No es posible validar el contenido de survey.\033[0m")        
+        
         survey = self.survey
         one_row_dh = []
         
-        for dh in survey["BHID"].unique():
-            count = len(survey[survey["BHID"] == dh])
+        for dh in survey["ID"].unique():
+            count = len(survey[survey["ID"] == dh])
             if count <= 1:
                 one_row_dh.append(dh)
                 print(f"    Remover sondaje {dh} con data insuficiente en survey")
@@ -116,11 +125,15 @@ class DrillData:
             self.validated = False    
             
             
-    def validate_BHID(self):
+    def validate_ID(self):
         """Validates if there are no extra drillholes in some of the tables."""
-        c = set(self.collar["BHID"].unique())
-        s = set(self.survey["BHID"].unique())
-        t = set(self.table["BHID"].unique())
+        
+        if not self.validated:
+            return print("\033[1m    Las columnas no han sido validadas. No es posible validar el ID de los sondajes.\033[0m")   
+        
+        c = set(self.collar["ID"].unique())
+        s = set(self.survey["ID"].unique())
+        t = set(self.table["ID"].unique())
         extra_dh = c ^ s | t ^ s | c ^ t
         
         if len(extra_dh) == 0:
@@ -146,38 +159,38 @@ class DrillData:
     
         
     def validate(self):
-        print("Validación de información en collar:")
-        self.validate_columns(self.collar, "collar", ["BHID", "XCOLLAR", "YCOLLAR", "ZCOLLAR"])
-        self.validate_datatypes(self.collar, "collar", {"BHID": "object", "XCOLLAR": "float64", "YCOLLAR": "float64", "ZCOLLAR": "float64"})
+        print("\033[1mValidación de información en collar:\033[0m")
+        self.validate_columns(self.collar, "collar", ["ID", "X", "Y", "Z"])
+        self.validate_datatypes(self.collar, "collar", {"ID": "object", "X": "float64", "Y": "float64", "Z": "float64"})
         print("")
         
-        print("Validación de información en survey:")
-        self.validate_columns(self.survey, "survey", ["BHID", "AT", "AZ", "DIP"])
-        self.validate_datatypes(self.survey, "survey", {"BHID": "object", "AT": "float64", "AZ": "float64", "DIP": "float64"})
+        print("\033[1mValidación de información en survey:\033[0m")
+        self.validate_columns(self.survey, "survey", ["ID", "AT", "AZ", "DIP"])
+        self.validate_datatypes(self.survey, "survey", {"ID": "object", "AT": "float64", "AZ": "float64", "DIP": "float64"})
         print("")
         
-        print(f"Validación de información en {self.table_name}:")
-        self.validate_columns(self.table, self.table_name, ["BHID", "FROM", "TO"], istable=True)
-        self.validate_datatypes(self.table, self.table_name, {"BHID": "object", "FROM": "float64", "TO": "float64"})
+        print(f"\033[1mValidación de información en {self.table_name}:\033[0m")
+        self.validate_columns(self.table, self.table_name, ["ID", "FROM", "TO"], istable=True)
+        self.validate_datatypes(self.table, self.table_name, {"ID": "object", "FROM": "float64", "TO": "float64"})
         print("")
         
-        print(f"Validación de registros en survey por cada sondaje")
+        print(f"\033[1mValidación de registros en survey por cada sondaje\033[0m")
         self.validate_survey()
         print("")
         
-        print(f"Validación de sondajes adicionales en algunos archivos:")
-        self.validate_BHID()
+        print(f"\033[1mValidación de sondajes adicionales en algunos archivos:\033[0m")
+        self.validate_ID()
         print("")
         
         if self.validated == True:
-            print("Los sondajes han sido validados.")
+            print("\033[1mLos sondajes han sido validados.\033[0m")
         else:
-            print("La validación de los sondajes ha fallado.")
+            print("\033[1mLa validación de los sondajes ha fallado.\033[0m")
     
     
     def get_points(self, feature: str):
         if self.validated == False:
-            return print("La información debe ser validada primero a través del método validate.")
+            return print("\033[1mLa información debe ser validada primero a través del método validate.\033[0m")
         
         self.feature = feature
         collar = self.collar
@@ -185,15 +198,15 @@ class DrillData:
         table = self.table
         
         points = []
-        table = self.table[["BHID", "FROM", "TO", feature]].copy()
-        bhid = self.survey["BHID"].unique()
+        table = self.table[["ID", "FROM", "TO", feature]].copy()
+        holeid = self.survey["ID"].unique()
         
-        print(f"Procesando la información de {len(bhid)} sondajes. Columna: {feature}")
-        for dh in tqdm(bhid):
+        print(f"Procesando la información de {len(holeid)} sondajes. Columna: {feature}")
+        for dh in tqdm(holeid):
             # Información del sondaje
-            dh_collar = collar[collar["BHID"] == dh].values[0][1:].astype(float)
-            dh_survey = survey[survey["BHID"] == dh].values[:, 1:].astype(float)
-            dh_feature = table[table["BHID"] == dh].values[:, 1:]
+            dh_collar = collar[collar["ID"] == dh].values[0][1:].astype(float)
+            dh_survey = survey[survey["ID"] == dh].values[:, 1:].astype(float)
+            dh_feature = table[table["ID"] == dh].values[:, 1:]
     
             # Direcciones del sondaje
             lengths = dh_survey[1:, 0] - dh_survey[:-1, 0]
@@ -232,19 +245,19 @@ class DrillData:
     
     def plot_3d(self):
         if self.has_points == False:
-            return print("Los puntos para la visualización aún no han sido generados a través del método get_points.")
+            return print("\033[1mLos puntos para la visualización aún no han sido generados a través del método get_points.\033[0m")
         
         collar = self.collar
         feature = self.feature
         points = self.points
         
         # Dimensiones del gráfico 3D
-        xmin, xmax = round(collar["XCOLLAR"].min(), -3) - 1000, round(collar["XCOLLAR"].max(), -3) + 1000
-        ymin, ymax = round(collar["YCOLLAR"].min(), -3) - 1000, round(collar["YCOLLAR"].max(), -3) + 1000
-        zmin, zmax = round(collar["ZCOLLAR"].min(), -3) - 1000, round(collar["ZCOLLAR"].max(), -3) + 1000
+        xmin, xmax = round(collar["X"].min(), -3) - 1000, round(collar["X"].max(), -3) + 1000
+        ymin, ymax = round(collar["Y"].min(), -3) - 1000, round(collar["Y"].max(), -3) + 1000
+        zmin, zmax = round(collar["Z"].min(), -3) - 1000, round(collar["Z"].max(), -3) + 1000
         
         # Visualización 3D en Plotly
-        fig = px.scatter_3d(data_frame=collar, x="XCOLLAR", y="YCOLLAR", z="ZCOLLAR", text="BHID")
+        fig = px.scatter_3d(data_frame=collar, x="X", y="Y", z="Z", text="ID")
         fig.update_traces(marker=dict(size=1, color="white"), textfont=dict(size=7, color="white"))
         
         for value in points[feature].unique():
