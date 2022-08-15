@@ -16,7 +16,7 @@ Si tienes cuenta en Github, no olvides darle una estrella al proyecto para que s
 
 ***
 ## Descripción
-Este manual ha sido creado con la finalidad de facilitar el aprendizaje en Python para estudiantes y profesionales en el campo de la Geología.
+Este manual ha sido creado con la finalidad de facilitar el aprendizaje en Python a estudiantes y profesionales en el campo de la Geología.
 
 Es recomendable tener conocimientos previos en geología general, estadística y álgebra lineal.\
 También es importante tener perseverancia para aprender cada tema y creatividad para resolver problemas.
