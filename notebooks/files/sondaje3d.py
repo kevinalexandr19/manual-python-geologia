@@ -17,6 +17,11 @@ import plotly.graph_objects as go
 
 
 def xyz(d, az1, dip1, az2, dip2):
+    """     Interpolates the azimuth and dip angle over a line.\n
+    Parameters\n    ----------
+    d : units of distance between the two points.\n
+    az1, dip1, az2, dip2 : float, azimuth and dip (downward positive) of both points.\n"""  
+    
     az1 = np.radians(az1)
     dip1 = np.radians(90 - dip1)
     
@@ -52,6 +57,9 @@ class DrillData:
         self.table_name = table_name
         self.validated = False
         self.has_points = False
+        self.feature = None
+        self.feature_points = None
+        self.trajectory = None
         
         
     def validate_columns(self, df: pd.DataFrame, name: str, columns: list, istable=False):
@@ -188,11 +196,12 @@ class DrillData:
             print("\033[1mLa validación de los sondajes ha fallado.\033[0m")
     
     
-    def get_points(self, feature: str):
+    def get_points(self, feature: str, dtype: str):
         if self.validated == False:
             return print("\033[1mLa información debe ser validada primero a través del método validate.\033[0m")
         
         self.feature = feature
+        self.feature_dtype = dtype
         collar = self.collar
         survey = self.survey
         table = self.table
@@ -200,47 +209,87 @@ class DrillData:
         points = []
         table = self.table[["ID", "FROM", "TO", feature]].copy()
         holeid = self.survey["ID"].unique()
-        
+
         print(f"Procesando la información de {len(holeid)} sondajes. Columna: {feature}")
-        for dh in tqdm(holeid):
-            # Información del sondaje
-            dh_collar = collar[collar["ID"] == dh].values[0][1:].astype(float)
-            dh_survey = survey[survey["ID"] == dh].values[:, 1:].astype(float)
-            dh_feature = table[table["ID"] == dh].values[:, 1:]
+
+        if dtype == "categoric":
+            for dh in tqdm(holeid):
+                # Información del sondaje
+                dh_collar = collar[collar["ID"] == dh].values[0][1:].astype(float)
+                dh_survey = survey[survey["ID"] == dh].values[:, 1:].astype(float)
+                dh_feature = table[table["ID"] == dh].values[:, 1:]
     
-            # Direcciones del sondaje
-            lengths = dh_survey[1:, 0] - dh_survey[:-1, 0]
-            knots = [np.array([0, 0, 0])]
-            for d, array1, array2 in zip(lengths, dh_survey[:-1, 1:], dh_survey[1:, 1:]):
-                knots.append(xyz(d, array1[0], array1[1], array2[0], array2[1]))
-            knots = np.cumsum(knots, axis=0)
+                # Direcciones del sondaje
+                lengths = dh_survey[1:, 0] - dh_survey[:-1, 0]
+                knots = [np.array([0, 0, 0])]
+                for d, array1, array2 in zip(lengths, dh_survey[:-1, 1:], dh_survey[1:, 1:]):
+                    knots.append(xyz(d, array1[0], array1[1], array2[0], array2[1]))
+                knots = np.cumsum(knots, axis=0)
     
-            # Coordenadas del sondaje
-            knots = knots + dh_collar
+                # Coordenadas del sondaje
+                knots = knots + dh_collar
             
-            # Interpolación de puntos en la dirección del sondaje
-            if len(dh_survey) > 3:
-                tck, u = interpolate.splprep(knots.T, k=2)    
-            else:
-                tck, u = interpolate.splprep(knots.T, k=1)
+                # Interpolación de puntos en la dirección del sondaje
+                if len(dh_survey) > 3:
+                    tck, u = interpolate.splprep(knots.T, k=2)    
+                else:
+                    tck, u = interpolate.splprep(knots.T, k=1)
     
-            # Interpolación de puntos a lo largo de todo el sondaje
-            length = dh_feature[:, 1].max()
-            dfrom = dh_feature[:, 0] / length
-            dto = dh_feature[:, 1] / length
-            col = dh_feature[:, 2]
+                # Interpolación de puntos a lo largo de todo el sondaje
+                length = dh_feature[:, 1].max()
+                dfrom = dh_feature[:, 0] / length
+                dto = dh_feature[:, 1] / length
+                column = dh_feature[:, 2]
     
-            for u, v, r in zip(dfrom, dto, col):
-                p1 = [float(i) for i in interpolate.splev(u, tck)]
-                p1.append(r)
-                p2 = [float(i) for i in interpolate.splev(v, tck)]
-                p2.append(r)
-                p3 = [None, None, None, r]
-                points.extend([p1, p2, p3])
+                for a, b, col  in zip(dfrom, dto, column):
+                    p1 = [float(i) for i in interpolate.splev(a, tck)]
+                    p1.append(col)
+                    p2 = [float(i) for i in interpolate.splev(b, tck)]
+                    p2.append(col)
+                    p3 = [None, None, None, col]
+                    points.extend([p1, p2, p3])
+        
+        elif dtype == "numeric":
+            for dh in tqdm(holeid):
+                # Información del sondaje
+                dh_collar = collar[collar["ID"] == dh].values[0][1:].astype(float)
+                dh_survey = survey[survey["ID"] == dh].values[:, 1:].astype(float)
+                dh_feature = table[table["ID"] == dh].values[:, 1:]
+    
+                # Direcciones del sondaje
+                lengths = dh_survey[1:, 0] - dh_survey[:-1, 0]
+                knots = [np.array([0, 0, 0])]
+                for d, array1, array2 in zip(lengths, dh_survey[:-1, 1:], dh_survey[1:, 1:]):
+                    knots.append(xyz(d, array1[0], array1[1], array2[0], array2[1]))
+                knots = np.cumsum(knots, axis=0)
+    
+                # Coordenadas del sondaje
+                knots = knots + dh_collar
+            
+                # Interpolación de puntos en la dirección del sondaje
+                if len(dh_survey) > 3:
+                    tck, u = interpolate.splprep(knots.T, k=2)    
+                else:
+                    tck, u = interpolate.splprep(knots.T, k=1)
+    
+                # Interpolación de puntos a lo largo de todo el sondaje
+                length = dh_feature[:, 1].max()
+                dfrom = dh_feature[:, 0] / length
+                dto = dh_feature[:, 1] / length
+                column = dh_feature[:, 2]
+    
+                for a, b, col in zip(dfrom, dto, column):
+                    p1 = [float(i) for i in interpolate.splev(a, tck)]
+                    p1.append(col)
+                    p2 = [float(i) for i in interpolate.splev(b, tck)]
+                    p2.append(col)
+                    points.extend([p1, p2])
+                
+                points.append([None, None, None, np.nan])
         
         # La información procesada se almacena en el atributo points
         self.points = pd.DataFrame(points, columns=["X", "Y", "Z", feature])
-        self.has_points = True        
+        self.has_points = True
     
     
     def plot_3d(self):
@@ -257,17 +306,34 @@ class DrillData:
         zmin, zmax = round(collar["Z"].min(), -3) - 1000, round(collar["Z"].max(), -3) + 1000
         
         # Visualización 3D en Plotly
-        fig = px.scatter_3d(data_frame=collar, x="X", y="Y", z="Z", text="ID")
-        fig.update_traces(marker=dict(size=1, color="white"), textfont=dict(size=7, color="white"))
+        fig = go.Figure()
         
-        for value in points[feature].unique():
-            df = points[points[feature] == value]
-            fig.add_trace(go.Scatter3d(x=df["X"], y=df["Y"], z=df["Z"], name=value,
-                                       mode="lines", line=dict(width=7), connectgaps=False))
+        fig.add_trace(go.Scatter3d(x=collar["X"], y=collar["Y"], z=collar["Z"], text=collar["ID"], name="Collar",
+                                   legendgroup="drillhole", legendgrouptitle_text="Drillhole",
+                                   mode="markers+text", marker=dict(size=1, color="lightgray"), textfont=dict(size=7, color="white")))
+        
+        fig.add_trace(go.Scatter3d(x=points["X"], y=points["Y"], z=points["Z"], name="Path",
+                                   legendgroup="drillhole", legendgrouptitle_text="Drillhole",
+                                   mode="lines", line=dict(width=0.8, color="lightgray"), connectgaps=False))
+        
+        if self.feature_dtype == "categoric":
+            for value in points[feature].unique():
+                df = points[points[feature] == value]
+                fig.add_trace(go.Scatter3d(x=df["X"], y=df["Y"], z=df["Z"], name=value,
+                                           legendgroup="feature", legendgrouptitle_text=feature,
+                                           mode="lines", line=dict(width=7), connectgaps=False))
+        elif self.feature_dtype == "numeric":
+            fig.add_trace(go.Scatter3d(x=points["X"], y=points["Y"], z=points["Z"], name=feature, 
+                                       legendgroup="feature", legendgrouptitle_text=feature,
+                                       mode="lines+text", connectgaps=False, 
+                                       line=dict(colorbar=dict(title=feature, titlefont=dict(color="white"), x=-0.1, tickfont=dict(color="white")), 
+                                                 colorscale="Jet", width=7, color=points[feature])
+                                      )
+                         )
         
         fig.update_layout(
             autosize=False,
-            legend = dict(bgcolor="white", title=f"{feature}", itemsizing="constant"),
+            legend = dict(bgcolor="white", itemsizing="constant", groupclick="toggleitem"),
             width=1000,
             height=600,
             margin=dict(
