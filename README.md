@@ -54,15 +54,20 @@ Todos los capítulos están disponibles dentro del repositorio como notebooks de
   4b. Variograma 1D\
   4c. Declustering\
   4d. Interpolación 2D - Inverso de la distancia
-5. Geoquímica\
-  5a. Pyrolite
-6. Geofísica\
-  6a. Visualizando registros de pozo
-7. Geología estructural\
-  7a. Mplstereonet\
-  7b. Red estereográfica interactiva
-8. Geotecnia\
-  8a. Estimación de la probabilidad de falla en un talud
+5. Análisis geoespacial\
+  5a. Shapely\
+  5b. Geopandas\
+  5c. Rioxarray\
+  5d. Leafmap
+6. Geoquímica\
+  6a. Pyrolite
+7. Geofísica\
+  7a. Visualizando registros de pozo
+8. Geología estructural\
+  8a. Mplstereonet\
+  8b. Red estereográfica interactiva
+9. Geotecnia\
+  9a. Estimación de la probabilidad de fallo en un talud
   
 ### Plantillas de trabajo
 - Plantilla para visualizar sondajes en 3D
