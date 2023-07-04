@@ -7,7 +7,7 @@ Si tienes cuenta en Github, no olvides darle una estrella al proyecto para que s
 
 ***
 
-### **Editado por: Kevin Alexander Gómez**
+### **Autor: Kevin Alexander Gómez**
 #### Contacto: kevinalexandr19@gmail.com | [Linkedin](https://www.linkedin.com/in/kevin-alexander-g%C3%B3mez-2b0263111/) | [Github](https://github.com/kevinalexandr19)
 ***
 ### **¿Quieres probar el código en menos de 2 minutos y sin necesidad de instalar Python?**
