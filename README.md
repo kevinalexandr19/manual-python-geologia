@@ -1,5 +1,5 @@
 # Python para Geólogos
-### **Versión: 2.0 (Junio 2023)**
+### **Versión: 2.1 (Septiembre 2023)**
 Si tienes cuenta en Github, no olvides darle una estrella al proyecto para que siga creciendo ⭐
 ***
 
@@ -45,6 +45,8 @@ Es recomendable descargar el contenido del repositorio y usarlo como plantilla p
     - Pandas
     - Matplotlib
     - Interactividad en Python
+  - PG003 - Librerías de automatización
+    - Procesando PDFs en Python
   - PG099 - Ejercicios de programación geológica
   - PG099 - Ejercicios de programación geológica (Solucionario)
 - Estadística y Matemática
