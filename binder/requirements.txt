@@ -25,7 +25,7 @@ leafmap==0.23.4
 localtileserver==0.7.1
 jupyterlab==4.0.6
 corelab==1.0.2
-vtk==9.2.6
-pyvista=0.43.3
-trame==3.2.6
-trame-vtk==2.5.8
+pyvista==0.43.3
+vtk==9.3.0
+trame==3.5.2
+trame-vtk==2.8.5
