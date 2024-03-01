@@ -24,6 +24,7 @@ leafmap==0.23.4
 jsonschema==4.21.1
 localtileserver==0.10.1
 jupyterlab==4.1.2
+ipympl==0.9.3
 corelab==1.0.2
 pyvista==0.43.3
 vtk==9.3.0
