@@ -20,7 +20,7 @@ from IPython.display import Markdown
 
 ###############################################################################
 # Cálculo de distancia y diferencia cuadrática entre cada par de puntos para 1D
-@jit
+@jit(nopython=True)
 def gam1d(values, coords):
     lags = np.array([np.float64(x) for x in range(0)])
     sqvalues = np.array([np.float64(x) for x in range(0)])
@@ -37,7 +37,7 @@ def gam1d(values, coords):
 
 ###############################################################################
 # Cálculo de distancia y diferencia cuadrática entre cada par de puntos para 2D
-@jit
+@jit(nopython=True)
 def gam2d(values, coords):
     lags = np.array([np.float64(x) for x in range(0)])
     sqvalues = np.array([np.float64(x) for x in range(0)])
@@ -58,33 +58,33 @@ def gam2d(values, coords):
 
 ###################################################
 # Modelos de ajuste para el variograma experimental
-@jit
+@jit(nopython=True)
 def linear(h, c0, c, a):
     return c0 + c * (h/a)
 
-@jit
+@jit(nopython=True)
 def exponential(h, c0, c, a):
     return c0 + c * (1 - np.exp(-h/a))
 
-@jit
+@jit(nopython=True)
 def spherical(h, c0, c, a):
     return c0 + c * (((1.5 * (h / a)) - (0.5 * ((h / a) ** 3))) * (h <= a) + 1 * (h > a))
 
-@jit
+@jit(nopython=True)
 def gaussian(h, c0, c, a):
     return c0 + c * (1 - np.exp(-(h ** 2) / (a ** 2)))
 
 
 ###################################################
 # Métricas de evaluación de ajuste
-@jit
+@jit(nopython=True)
 def r2_score(gamma: np.array, prediction: np.array):
     ss_res = np.sum((gamma - prediction) ** 2)
     ss_tot = np.sum((gamma - np.mean(gamma)) ** 2)
     r2 = 1 - (ss_res / ss_tot)
     return r2
 
-@jit
+@jit(nopython=True)
 def mse_score(gamma: np.array, prediction: np.array):
     mse = np.mean((gamma - prediction) ** 2)
     return mse
@@ -398,7 +398,7 @@ R2: {r2}   MSE: {mse}"""
 
 ##### Método para mostrar el widget que permite elegir la distancia de separación
     def selectLagDist(self):
-        self.lagDistSelector.lagDistWidget()      
+        self.lagDistSelector.lagDistWidget()
 
         
 ##### Método para ajustar el modelo del variograma experimental        
