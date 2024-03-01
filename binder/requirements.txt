@@ -30,3 +30,4 @@ pyvista==0.43.3
 vtk==9.3.0
 trame==3.5.2
 trame-vtk==2.8.5
+trame-vuetify==2.4.2
