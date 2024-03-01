@@ -1,5 +1,5 @@
 # Python para Geólogos
-### **Versión: 2.2 (Diciembre 2023)** 🎄
+### **Versión: 2.3 (Febrero 2023)**
 Si tienes cuenta en Github, no olvides darle una estrella al proyecto para que siga creciendo ⭐
 ***
 
@@ -44,7 +44,9 @@ Es recomendable descargar el contenido del repositorio y usarlo como plantilla p
     - Numpy
     - Pandas
     - Matplotlib
+    - SQLite - Bases de datos
     - Interactividad en Python
+    - Midiendo el tiempo con Python
   - PG003 - Librerías de automatización
     - Procesando PDFs en Python
   - PG099 - Ejercicios de programación geológica
@@ -61,6 +63,7 @@ Es recomendable descargar el contenido del repositorio y usarlo como plantilla p
     - Análisis inferencial
   - PG103 - Visualización de datos en Geología
     - Seaborn
+    - Plotly
     - Visualización de datos
     - Visualización de sondajes en 3D
     - Visualización de un modelo de bloques en 3D
@@ -74,6 +77,8 @@ Es recomendable descargar el contenido del repositorio y usarlo como plantilla p
   - PG202 - Aprendizaje no supervisado
     - Análisis de componentes principales (PCA)
     - Clustering con K-means
+  - PG203 - Deep Learning
+    - Fundamentos de Deep Learning
 - Aplicaciones en Geología
   - PG301 - Geoestadística
     - Introducción al Variograma
