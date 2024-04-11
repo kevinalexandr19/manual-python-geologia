@@ -1,5 +1,5 @@
 # Python para Geólogos
-### **Versión: 2.3 (Febrero 2024)**
+### **Versión: 2.4 (Abril 2024)**
 Si tienes cuenta en Github, no olvides darle una estrella al proyecto para que siga creciendo ⭐
 ***
 
