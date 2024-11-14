@@ -34,79 +34,86 @@ Es recomendable descargar el contenido del repositorio y usarlo como plantilla p
 
 - Fundamentos de programación geológica
   - PG001 - Fundamentos de Python
-    - Variables geológicas
-    - ¿Cómo mostrar un resultado en Python?
-    - Lógica computacional
-    - Estructuras de datos
-    - Automatización de tareas en Geología
-    - Programación orientada a objetos
+    - Variables geológicas ✔️
+    - ¿Cómo mostrar un resultado en Python? ✔️
+    - Lógica computacional ✔️
+    - Estructuras de datos ✔️
+    - Automatización de tareas en Geología ✔️
+    - Programación orientada a objetos ✔️
+    - Palabras reservadas en Python ✔️
   - PG002 - Librerías fundamentales de Python
-    - Numpy
-    - Pandas
-    - Matplotlib
-    - SQLite - Bases de datos
-    - Midiendo el tiempo con Python
+    - Numpy ✔️
+    - Pandas ✔️
+    - Matplotlib ✔️
+    - SQLite - Bases de datos ✔️
+    - Midiendo el tiempo con Python ✔️
   - PG003 - Librerías de automatización
-    - Interactividad en Python
-    - Procesando PDFs en Python
-    - Automatización de reportes
-  - PG099 - Ejercicios de programación geológica
-  - PG099 - Ejercicios de programación geológica (Solucionario)
+    - Interactividad en Python ✔️
+    - Procesando PDFs en Python ✔️
+    - Automatización de reportes ✔️
+  - PG099 - Ejercicios de programación geológica ✔️
+  - PG099 - Ejercicios de programación geológica (Solucionario) ✔️
 - Estadística y Matemática
   - PG101 - Fundamentos de Estadística
-    - Estadística descriptiva
-    - Variables aleatorias
-    - Estadística inferencial
-    - Bootstrap
-    - Simulación de Montecarlo
-    - Datasaurus
+    - Estadística descriptiva ✔️
+    - Variables aleatorias ✔️
+    - Estadística inferencial ⏳
+    - Bootstrap ✔️
+    - Simulación de Montecarlo ✔️
+    - Datasaurus ✔️
   - PG102 - Análisis de datos en Geología
-    - Análisis descriptivo
-    - Análisis exploratorio de datos
-    - Análisis inferencial
-    - Bases de datos - Sondajes
+    - Análisis descriptivo ✔️
+    - Análisis exploratorio de datos ⏳
+    - Análisis inferencial ⏳
+    - Bases de datos - Sondajes ✔️
   - PG103 - Visualización de datos en Geología
-    - Seaborn
-    - Plotly
-    - Visualización de datos
-    - Visualización de sondajes en 3D
-    - Visualización de un modelo de bloques en 3D
+    - Seaborn ✔️
+    - Plotly ✔️
+    - Visualización de datos ✔️
+    - Visualización de sondajes en 3D ✔️
+    - Visualización de un modelo de bloques en 3D ✔️
 - Ciencia de datos y Machine Learning
-  - PG200 - Fundamentos de Machine Learning
+  - PG200 - Fundamentos de Machine Learning ✔️
+    - Descenso del Gradiente ✔️
   - PG201 - Aprendizaje supervisado
-    - Regresión lineal
-    - Regresión logística
-    - Árboles de decisión (DT)
-    - Random Forest (RF)
+    - Regresión lineal ✔️
+    - Regresión logística ✔️
+    - Árboles de decisión (DT) ✔️
+    - Random Forest (RF) ✔️
     - Support Vector Machine (SVM)
+    - K-Nearest Neighbors (KNN)
+    - Extreme Gradient Boosting (XGBoost) ✔️
   - PG202 - Aprendizaje no supervisado
-    - Análisis de componentes principales (PCA)
-    - Clustering con K-means
+    - Análisis de componentes principales (PCA) ✔️
+    - Clustering con K-means ⏳
+    - Autoencoders (AE) ⏳
+    - Generative Adversarial Networks (GAN) ⏳
   - PG203 - Deep Learning
-    - Fundamentos de Deep Learning
+    - Fundamentos de Deep Learning ⏳
+    - Redes neuronales desde cero ✔️
 - Aplicaciones en Geología
   - PG301 - Geoestadística
-    - Introducción al Variograma
-    - Variograma 1D
-    - Declustering
+    - Introducción al Variograma ✔️
+    - Variograma 1D ✔️
+    - Declustering ✔️
   - PG302 - Geoquímica
-    - Pyrolite
-    - Diagrama de clasificación QAP
+    - Pyrolite ✔️
+    - Diagrama de clasificación QAP ⏳
   - PG303 - Análisis geoespacial
-    - Shapely
-    - Geopandas
-    - Rioxarray
-    - Leafmap
+    - Shapely ✔️
+    - Geopandas ✔️
+    - Rioxarray ✔️
+    - Leafmap ✔️
   - PG304 - Geofísica
-    - Visualización de registros de pozo
+    - Visualización de registros de pozo ✔️
   - PG305 - Estratigrafía y Sedimentología
-    - StratiLib - Columnas estratigráficas
+    - StratiLib - Columnas estratigráficas ✔️
   - PG306 - Geología estructural y Geomecánica
-    - Mplstereonet
-    - Estimación de la probabilidad de fallo en un talud
+    - Mplstereonet ✔️
+    - Estimación de la probabilidad de fallo en un talud ✔️
   
 ### Plantillas de trabajo
-- Plantilla para visualizar sondajes en 3D
+- Plantilla para visualizar sondajes en 3D ✔️
 
 ***
 ### ¿Cómo usar el contenido de este proyecto?
@@ -120,13 +127,14 @@ Si no tienes instalado `Python`, puedes seguir las indicaciones del archivo `ins
 ***
 ### Referencias
 - Barbieri, R., Garelik, C. (2022). [La matemática y las geociencias](https://editorial.unrn.edu.ar/index.php/catalogo/346/view_bl/62/lecturas-de-catedra/106/la-matematica-y-las-geociencias?tab=getmybooksTab&is_show_data=1). Editorial UNRN (pp. 15 y 136).
-- Bhattacharya, S. (2021). [A Primer on Machine Learning in Subsurface Geosciences]([)](https://link.springer.com/book/10.1007/978-3-030-71768-1).
+- Bhattacharya, S. (2021). [A Primer on Machine Learning in Subsurface Geosciences](https://link.springer.com/book/10.1007/978-3-030-71768-1).
 - GEOROC (2023). [Geochemistry of Rocks of the Oceans and Continents](https://georoc.mpch-mainz.gwdg.de/georoc/Start.asp). Geoscience Centre Göttingen, Germany.
 - Mälicke, M. (2022). [SciKit-GStat 1.0: a SciPy-flavored geostatistical variogram estimation toolbox written in Python](https://gmd.copernicus.org/articles/15/2505/2022). European Geosciences Union, Volume 15, issue 6. Institute for Water and River Basin Management, Karlsruhe Institute of Technology (KIT), Karlsruhe, Germany.
 - Marsden, Eric. (2021). [Monte Carlo simulation for estimating slope failure risk](https://risk-engineering.org/notebook/monte-carlo-slope-stability.html).
 - Merlino, Rubens (2022). [Stratilib](https://github.com/rubensdmp/stratilib).
 - Petrelli, M. (2021). [Introduction to Python in Earth Science Data Analysis](https://link.springer.com/book/10.1007/978-3-030-78055-5). Repositorio en [Github](https://github.com/petrelli-m/python_earth_science_book).
 - Petrelli, M. (2023). [Machine Learning for Geosciences](https://link.springer.com/book/10.1007/978-3-031-35114-3)
+- Prieto Gómez, G. (2024). [Introducción a Python para geociencias](https://repositorio.unal.edu.co/handle/unal/85961). Universidad Nacional de Colombia, Sede Bogotá, Facultad de Ciencias.
 - Pyrcz, M. (2021). [Python Numerical Demos](https://github.com/GeostatsGuy/PythonNumericalDemos).
 - Suarez-Burgoa, L. (2017). [Matematización de la geología](https://www.researchgate.net/publication/313464003_Matematizacion_de_la_geologia). Boletín de Ciencias de la Tierra 41 (pp. 30 - 38). Universidad Nacional de Colombia.
 - Trauth, M. (2022). [Python Recipes for Earth Sciences](https://link.springer.com/book/10.1007/978-3-031-07719-7). Institute of Geosciences, University of Potsdam, Potsdam, Brandenburg, Germany.
