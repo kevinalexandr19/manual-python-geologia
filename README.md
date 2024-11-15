@@ -24,15 +24,17 @@ Este proyecto académico fue creado con la finalidad de facilitar el aprendizaje
 
 Desarrollando un pensamiento algorítmico, aprenderás a usar código en Python para la solución de problemas en Geología.
 
-Es recomendable tener conocimientos previos en geología general, estadística y álgebra lineal.\
+Es recomendable tener conocimientos previos en geología general, estadística y álgebra lineal. <br>
 También es importante tener perseverancia para aprender cada tema y creatividad para resolver problemas.
 
 ***
 ## **Índice** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kevinalexandr19/manual-python-geologia/main?labpath=notebooks%2Fpg000_inicio.ipynb)
-Todos los capítulos están disponibles dentro del repositorio como notebooks de Jupyter `.ipynb`.\
+Todos los capítulos están disponibles dentro del repositorio como notebooks de Jupyter `.ipynb`. <br>
 Es recomendable descargar el contenido del repositorio y usarlo como plantilla para desarrollar tus propios notebooks.
 
-- Fundamentos de programación geológica
+> La mayoría de notebooks están listos (✔️), pero algunos todavía están en desarrollo (⏳).
+
+- Fundamentos de programación geológica 
   - PG001 - Fundamentos de Python
     - Variables geológicas ✔️
     - ¿Cómo mostrar un resultado en Python? ✔️
@@ -65,7 +67,6 @@ Es recomendable descargar el contenido del repositorio y usarlo como plantilla p
     - Análisis descriptivo ✔️
     - Análisis exploratorio de datos ⏳
     - Análisis inferencial ⏳
-    - Bases de datos - Sondajes ✔️
   - PG103 - Visualización de datos en Geología
     - Seaborn ✔️
     - Plotly ✔️
@@ -80,8 +81,8 @@ Es recomendable descargar el contenido del repositorio y usarlo como plantilla p
     - Regresión logística ✔️
     - Árboles de decisión (DT) ✔️
     - Random Forest (RF) ✔️
-    - Support Vector Machine (SVM)
-    - K-Nearest Neighbors (KNN)
+    - Support Vector Machine (SVM) ⏳
+    - K-Nearest Neighbors (KNN) ⏳
     - Extreme Gradient Boosting (XGBoost) ✔️
   - PG202 - Aprendizaje no supervisado
     - Análisis de componentes principales (PCA) ✔️
@@ -98,24 +99,37 @@ Es recomendable descargar el contenido del repositorio y usarlo como plantilla p
     - Declustering ✔️
   - PG302 - Geoquímica
     - Pyrolite ✔️
+    - Diagramas ternarios ⏳
     - Diagrama de clasificación QAP ⏳
   - PG303 - Análisis geoespacial
     - Shapely ✔️
     - Geopandas ✔️
     - Rioxarray ✔️
     - Leafmap ✔️
+    - Geoherencia ⏳
   - PG304 - Geofísica
-    - Visualización de registros de pozo ✔️
-  - PG305 - Estratigrafía y Sedimentología
+    - Anomalía de Bouguer ⏳
+    - Intensidad magnética total y residual ⏳
+    - Intensidad radiométrica ⏳
+  - PG305 - Geología económica y Exploración mineral
+    - Introducción a la Geología Económica ⏳
+    - Bases de datos - Sondajes ✔️
+    - Mapeo de prospectividad mineral ⏳
+  - PG306 - Estratigrafía y Sedimentología
     - StratiLib - Columnas estratigráficas ✔️
-  - PG306 - Geología estructural y Geomecánica
+  - PG307 - Geología estructural y Geomecánica
     - Mplstereonet ✔️
     - Estimación de la probabilidad de fallo en un talud ✔️
+  - PG308 - Geología del Petróleo
+    - Introducción a la Geología del Petróleo ⏳
+    - Petrofísica ⏳
+    - Visualización de registros de pozo ✔️
+
   
 ### Plantillas de trabajo
 - Plantilla para visualizar sondajes en 3D ✔️
 
-***
+---
 ### ¿Cómo usar el contenido de este proyecto?
 El proyecto contiene documentos en formato `.ipynb` y se pueden abrir de las siguientes formas:
 - A través de un navegador web, usando la aplicación de `Google Colab`.
