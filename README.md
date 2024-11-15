@@ -143,6 +143,7 @@ Si no tienes instalado `Python`, puedes seguir las indicaciones del archivo `ins
 - Barbieri, R., Garelik, C. (2022). [La matemática y las geociencias](https://editorial.unrn.edu.ar/index.php/catalogo/346/view_bl/62/lecturas-de-catedra/106/la-matematica-y-las-geociencias?tab=getmybooksTab&is_show_data=1). Editorial UNRN (pp. 15 y 136).
 - Bhattacharya, S. (2021). [A Primer on Machine Learning in Subsurface Geosciences](https://link.springer.com/book/10.1007/978-3-030-71768-1).
 - GEOROC (2023). [Geochemistry of Rocks of the Oceans and Continents](https://georoc.mpch-mainz.gwdg.de/georoc/Start.asp). Geoscience Centre Göttingen, Germany.
+- Kinsley, H., & Kukiela, D. (2020). [Neural Networks from Scratch in Python](https://nnfs.io/). Sentdex.
 - Mälicke, M. (2022). [SciKit-GStat 1.0: a SciPy-flavored geostatistical variogram estimation toolbox written in Python](https://gmd.copernicus.org/articles/15/2505/2022). European Geosciences Union, Volume 15, issue 6. Institute for Water and River Basin Management, Karlsruhe Institute of Technology (KIT), Karlsruhe, Germany.
 - Marsden, Eric. (2021). [Monte Carlo simulation for estimating slope failure risk](https://risk-engineering.org/notebook/monte-carlo-slope-stability.html).
 - Merlino, Rubens (2022). [Stratilib](https://github.com/rubensdmp/stratilib).
