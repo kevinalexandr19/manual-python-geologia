@@ -1,5 +1,6 @@
 numpy==1.26.4
 pandas==2.2.3
+openpyxl==3.1.2
 pyrolite==0.3.6
 matplotlib
 tqdm==4.66.5
@@ -14,6 +15,8 @@ stratilib==0.1.0
 geopy==2.4.1
 jupyterlab_widgets==3.0.13
 scikit-learn==1.5.1
+opencv-python==4.10.0.84
+xgboost==2.1.1
 geostatspy==0.0.71
 statsmodels==0.14.2
 shapely==2.0.6
