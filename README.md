@@ -87,11 +87,11 @@ Es recomendable descargar el contenido del repositorio y usarlo como plantilla p
   - PG202 - Aprendizaje no supervisado
     - Análisis de componentes principales (PCA) ✔️
     - Clustering con K-means ⏳
-    - Autoencoders (AE) ⏳
-    - Generative Adversarial Networks (GAN) ⏳
   - PG203 - Deep Learning
     - Fundamentos de Deep Learning ⏳
     - Redes neuronales desde cero ✔️
+    - Autoencoders (AE) ⏳
+    - Generative Adversarial Networks (GAN) ⏳
 - Aplicaciones en Geología
   - PG301 - Geoestadística
     - Introducción al Variograma ✔️
